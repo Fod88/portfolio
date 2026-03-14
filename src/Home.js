@@ -1,12 +1,13 @@
-import React,{useState,useEffect, } from 'react'
+import React,{useState,useEffect,useMemo} from 'react'
 import { FaCircleArrowRight, } from "react-icons/fa6";
 import imgHome from './images/home.png'
 export default function Home() {
-     const words = [
-    "React JS",
-    "Web Developer",
-    "FrontEnd Developer"
-  ]
+const words = useMemo(() => [
+  "React JS",
+  "Web Developer",
+  "FrontEnd Developer"
+], [])
+
   const [indexWord,setIndexWord] = useState(0)
   const [indexChar,setIndexChar] = useState(0)
   const [text,setText] = useState("")
@@ -35,7 +36,7 @@ export default function Home() {
       return ()=>{
         clearInterval(interval)
       }
-  },[indexChar,indexWord,isDeleting])
+  },[indexChar,indexWord,isDeleting,words])
   return (
     <>
       <div className='row m-auto' id={'Home'}>
@@ -50,7 +51,7 @@ export default function Home() {
             <button className='btn  ' style={{color : '#fff' , backgroundColor : 'rgb(93, 0, 255)'}}>Let's Connect <FaCircleArrowRight className="arrowIcon" /></button>
         </div>
         <div className='col-lg-7 col-sm-12'>
-          <img src = {imgHome} alt='Home image'className='img-fluid'  />
+          <img src = {imgHome} alt='Home'className='img-fluid'  />
         </div>
       </div>
     </>

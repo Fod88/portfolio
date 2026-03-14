@@ -714,15 +714,8 @@ circle.progress{
 .footer{
   display: flex;
   justify-content: space-around;
-  /* height: 40vh; */
 
  
-}
-
-.fooLeftSide{
-  /* display: flex;
-  justify-content: center; */
-  /* padding: 50px; */
 }
 .fooLeftSide a{
   font-size: 40px;
@@ -731,11 +724,6 @@ circle.progress{
   color: #fff;
 }
 
-.fooRightSide{
-  
-  /* margin-top: 50px; */
-
-}
 .Allfoot p{
   font-size: 18px;
   text-transform: capitalize;

@@ -1,5 +1,4 @@
 import React from 'react'
-import img  from'./images/image.png'
 import firpro1  from'./images/firpro1.png'
 import firpro2  from'./images/firpro2.png'
 import firpro3  from'./images/firpro3.png'

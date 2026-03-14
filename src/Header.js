@@ -9,7 +9,7 @@ export default function Header() {
       <>
         <nav className='navbar navbar-expand-sm b navbar-dark fixed-top' style={{color : '#fff' , backgroundColor : 'rgb(93, 0, 255)'}}>
           <div className='container-fluid px-5'>
-            <a href='#' className='navbar-brand h1 me-5' style={{fontSize : '28px'}}>Portfolio</a>
+            <a href='/' className='navbar-brand h1 me-5' style={{fontSize : '28px'}}>Portfolio</a>
             <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#collapseibleNavbar'>
               <span className='navbar-toggler-icon'></span>
             </button>
@@ -28,10 +28,10 @@ export default function Header() {
                     onClick={() => setActiveLink(2)}>Project</a>
                 </li>
                 <li className='nav-item d-flex justify-content-between gap-xxl-3' style = {{fontSize : '21px'}}>
-                  <a href="https://www.linkedin.com/in/fady-atef-2a0522379/" target="_blank" className='nav-link hoverLinks'><FaLinkedinIn/></a>
-                  <a href="https://www.facebook.com/fady.alparns.7/" target="_blank" className='nav-link hoverLinks'><FaFacebook/></a>
-                  <a href="https://www.instagram.com/fady67247" target="_blank" className='nav-link hoverLinks'><FaInstagram/></a>
-                  <a href="https://github.com/Fod88" target="_blank" className='nav-link hoverLinks'><FaGithub/></a>
+                  <a href="https://www.linkedin.com/in/fady-atef-2a0522379/" target="_blank" rel="noreferrer" className='nav-link hoverLinks'><FaLinkedinIn/></a>
+                  <a href="https://www.facebook.com/fady.alparns.7/" target="_blank" rel="noreferrer" className='nav-link hoverLinks'><FaFacebook/></a>
+                  <a href="https://www.instagram.com/fady67247" target="_blank" rel="noreferrer" className='nav-link hoverLinks'><FaInstagram/></a>
+                  <a href="https://github.com/Fod88" target="_blank" rel="noreferrer" className='nav-link hoverLinks'><FaGithub/></a>
                 </li>
               </ul>
               <button  className='btn border-white rounded-0 mt-md-0 ms-md-5 mt-sm-5 headerBtn' type='button'>Let's Connect</button>

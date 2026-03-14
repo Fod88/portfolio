@@ -4,7 +4,6 @@ import Header from "./Header";
 import Main from "./Main";
 import Firsection from "./Firsection";
 import Secsection from './Secsection.js'
-import Thrsecion from './Thrsection.js'
 import Thrsection from "./Thrsection.js";
 const App = ()=>{
 

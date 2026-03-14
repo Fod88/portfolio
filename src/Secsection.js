@@ -5,7 +5,7 @@ export default function Secsection() {
    <>
     <div className='secondSection container row justify-content-between m-auto my-5'>
       <div className='secLeftSide col-lg-6 col-sm-12'>
-        <img src={img} alt='image Second Page'className='img-fluid'/>
+        <img src={img} alt='Second Page'className='img-fluid'/>
       </div>
       <div className='secRightSide col-lg-6 col-sm-12'>
         <h1 className='secTitle'>Get In Touch</h1>
