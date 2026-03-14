@@ -1,38 +1,790 @@
-.App {
-  text-align: center;
+
+
+/* <nav className="navbar navbar-expand-sm navbar-primary bg-primary text-light fixed-top">
+  <div className="container-fluid">
+
+    <a className="navbar-brand h3 text-light" href="#">Portfolio</a>
+
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mynavbar"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
+
+    <div className="collapse navbar-collapse" id="mynavbar">
+      <ul className="navbar-nav me-auto justify-content-center h5 m-auto ulA text-light">
+
+        <li className="nav-item ">
+          <a 
+            href="#home"
+            className={activeLink === 0 ? "activeA nav-link" : "navA nav-link"}
+            onClick={() => setActiveLink(0)}
+          >
+            Home
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a
+            href="#skills"
+            className={activeLink === 1 ? "activeA nav-link" : "navA nav-link"}
+            onClick={() => setActiveLink(1)}
+          >
+            Skills
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a
+            href="#projects"
+            className={activeLink === 2 ? "activeA nav-link" : "navA nav-link"}
+            onClick={() => setActiveLink(2)}
+          >
+            Projects
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a href="https://www.linkedin.com/in/fady-atef-2a0522379/" target="_blank" rel="noreferrer" className="nav-link nav1_iconsa">
+            <FaLinkedinIn className="faIcon" />
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a href="https://www.facebook.com/fady.alparns.7/" target="_blank" rel="noreferrer" className="nav-link nav1_iconsa">
+            <FaFacebook className="faIcon" />
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a href="https://www.instagram.com/fady67247" target="_blank" rel="noreferrer" className="nav-link nav1_iconsa">
+            <FaInstagram className="faIcon" />
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a href="https://github.com/Fod88" target="_blank" rel="noreferrer" className="nav-link nav1_iconsa">
+            <FaGithub className="faIcon" />
+          </a>
+        </li>
+
+      </ul>
+
+      <form className="d-flex">
+        <button className="btn btn-primary my-2 border-light " type="button">
+          Let's Connect
+        </button>
+      </form>
+    </div>
+  </div>
+</nav> */
+
+
+
+/* Home */
+
+     /* <div className='mainData row'  id = {'home'}>
+           <div className='homeLeSide col-md-6 col-sm-12' >
+              <h2 className='mainTitle'>Welcome All In My Portifoloi</h2>
+              <h1 className='' >
+                Hi! I'm Fady Atef Nady, 
+                {text}
+                <span className="cursor">|</span>
+              </h1>
+              <p className='mainp'>Hello Everyone I have 9 months Of Experience In Web Development </p>
+              <button className='mainbtn'>Let's Connect <FaCircleArrowRight className="arrowIcon" /></button>
+           </div>
+          <div className='homeRiSide col-md-6 col-sm-12'>
+            <img src = {imgHome} alt='Home image' />
+          </div>
+        </div> */
+
+
+        /* Skills */
+
+      /* <div className='skills' id ={'skills'}>
+          <h1 className='skilTitle'>Skills</h1>
+          <p className='skilP'>You Can See My Skills</p>
+          <div className='skillsSection'>
+              <button className='skillbtn btnl' onClick={moveLeft}>❮</button>
+
+              {
+                skills.map((skill , index) =>(
+                  <SkillCircle key={index} percent={skill.percent} title={skill.title} position = {positions[index]} />
+                
+                ))
+              }
+                  
+              <button className=' skillbtn btnr' onClick={moveRight} >❯</button>
+          </div>
+        </div> */
+
+/* ///////////////////////////////////////////////////////////////////////// */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  /* height: 10000px; */
+  padding-top: 70px;
+  background-color: #fff;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* header */
+
+.activeA{
+  color: #fff;
+}
+
+.navA{
+  color: rgba(255, 255, 255, 0.466);
+}
+.headerBtn{
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.headerBtn::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.headerBtn:hover{
+  color: #1f1f1f;
+}
+
+.headerBtn:hover::after{
+  width: 100%;
+  visibility: visible;
+}
+
+
+.hoverLinks{
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.hoverLinks::after{
+  position: absolute;
+  content: '';
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: -1;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.hoverLinks:hover{
+  color: #1f1f1f;
+}
+
+.hoverLinks:hover::after{
+  width: 35px;
+  height: 35px;
+  visibility: visible;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* main */
+
+
+/* .mainData{
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  margin-top: 120px ;
+}
+
+.mainData .homeLeSide{
+  width: 40%;
+
+  margin-top: 30px ;
+}
+
+.homeLeSide h1{
+  font-size: 72px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 90px;
+}
+.homeLeSide p{
+  font-size: 18px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+ 
+
+}
+.homeLeSide button{
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border: none;
+  background-color: #fff;
+ 
+
+}
+
+.homeLeSide button .arrowIcon{
+  font-size: 22px;
+  color: rgb(0, 162, 255);
+  transform: translate(0px,5px);
+  transition: 0.5s ease;
+}
+.homeLeSide button:hover .arrowIcon{
+
+  transform: translate(5px,5px);
+}
+
+.mainData .homeRiSide{
+  width: 48%;
+  margin-top : -80px;
+
+}
+.mainData .homeRiSide img{
+  width: 100%;
+}
+.mainTitle{
+  width: 70%;
+  border: 0.5px solid rgb(0, 162, 255);
+  background-color: rgb(0, 162, 255);
+  color: #fff;
+  padding: 10px 0px;
+  text-align: center;
+
+}
+
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+.space {
+  width: 300px;
+}
+
+.planet {
+  fill: #7b3fe4;
+  animation: rotate 6s linear infinite;
+  transform-origin: center;
+}
+
+.astro {
+  fill: #ffffff;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+
+
+.HomeLS button .arrowIcon{
+  /* font-size: 22px; */
+  /* color: rgb(0, 162, 255); */
+  transform: translate(0px,0px);
+  transition: 0.5s ease;
+}
+.HomeLS button:hover .arrowIcon{
+
+  transform: translate(5px,0px);
+}
+
+/* /////////////////////////////////////////////////////// */
+
+.skills{
+  text-align: center;
+  background-color: rgb(249, 249, 249);
+  padding: 20px 0;
+}
+
+.skills h1{
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: rgb(38, 4, 97);
+}
+.skills p{
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-top: -20px;
+  color : rgba(38, 4, 97, 0.6)
+}
+
+.skillbtn{
+  position: absolute;
+   top: 41%;
+  color: #fff;
+  background-color:  rgb(93, 0, 255);
+  border: none;
+  z-index: 55;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.skillbtn:active{
+  background-color:  rgba(0, 162, 255, 0.5);
+}
+.btnl{
+ 
+  left: 3px;
+
+}
+.btnr{
+  right: 3px;
+}
+.skillsSection{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 60px;
+  margin:  auto;
+  overflow: hidden;
+  width: 51.5%;
+  background-color: rgb(251, 252, 253);
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.skillCircle{
+  position: relative;
+  width: 180px;
+  text-align: center;
+  margin-top: 40px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skillsSection svg{
+  transform: rotate(-90deg);
+}
+
+circle{
+  fill: none;
+  stroke-width: 12;
+}
+
+circle.bg{
+  stroke: #dcdada;
+}
+
+circle.progress{
+  stroke: rgb(93, 0, 255);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.2s ease;
+}
+
+.percent {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.skillCircle h3 {
+  margin-top: 5px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+/* Projects */
+.projects h2{
+  font-size: 38px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: rgb(38, 4, 97);
+}
+.projects p{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize ;
+  letter-spacing: 1px;
+  text-align: center;
+  color : rgba(38, 4, 97, 0.6)
+
+}
+.proNav{
+  width: 50%;
+  height: 60px;
+  border: 1px solid gainsboro;
+  display: flex;
+  /* justify-content: center; */
+  gap: 1px;
+  border-radius: 30px;
+  margin: auto;
+  overflow: hidden;
+}
+.proNav .navLink{
+  width: 33.2%;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 21px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-right:0.5px solid gainsboro ;
+  color: rgb(38, 4, 97);
+  position: relative;
+  z-index: 1;
+}
+
+
+.proNav .navLink::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color:  rgb(93, 0, 255);
+  transition: 1s ease;
+  z-index: -1;
+}
+.proNav .navLink.active::after{
+  width: 100%;
+}
+.proNav .navLink.active{
+  transition: 0.5s all;
+  color: #fff;
+}
+
+/* first Section */
+
+.firparentDiv{
+  width: 80%;
+  height: 100vh;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3,30%);
+  grid-template-rows: repeat(3,250px);
+  gap: 30px;
+  position: relative;
+}
+
+.firchildDiv{
+  border: 0.5px solid gainsboro;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.firchildDiv::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-radius: 15px;
+  background-color:  rgba(93, 0, 255,0.8);
+  transition: 1s ease;
+  z-index: 2;
+}
+.firchildDiv:hover::after{
+  height: 100%;
+}
+
+.fircontent{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-transform: capitalize;
+  text-align: center;
+  visibility: hidden;
+  transition: 0.5s ease;
+  z-index: 3;
+}
+.firchildDiv:hover .fircontent{
+  top: 50%;
+  visibility: visible;
+}
+.fircontent h2{
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 20;
+}
+.fircontent p{
+  letter-spacing: 1px;
+  color: #ffffffc3;
+}
+
+
+
+/* Second Section */
+
+.secondSection{
+  /* height: 100vh; */
+  background-color: #fff;
+}
+.secLeftSide{
+  text-align: center;
+  height: 100vh;
+}
+.secLeftSide img{
+  height: 700px;
+}
+.secRightSide{
+  height: 100vh;
+  /* text-align: center; */
+  margin: 50px auto;
+}
+.secTitle{
+  font-size: 30;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: rgb(38, 4, 97);
+
+  
+}
+
+.secparentDiv{
+  display: grid;
+  grid-template-columns: repeat(2,45%);
+  grid-auto-rows: minmax(45px,auto);
+  grid-gap: 15px 10px;
+  margin-bottom: 30px;
+  color: rgb(38, 4, 97);
+}
+
+.secparentDiv input{
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.secparentDiv textarea{
+  grid-column: 1/3 ;
+  grid-row: 3/8;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+.secchildBtn{
+  display: block;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.2) ;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  transition: 1s all;
+  transform: scale(1,1);
+  color: #7b3fe4;
+}
+.secchildBtn:active{
+  transform: scale(1.1,1.1);
+}
+.secchildBtn::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color:rgb(81, 0, 255);
+  transition: 1s;
+  z-index: -1;
+}
+.secchildBtn:hover::after{
+  width: 100%;
+}
+
+.secchildBtn:hover{
+  color: #fff;
+}
+
+.planet{
+  fill: #6c63ff;
+}
+
+.msg{
+  fill: #00bcd4;
+}
+
+.star{
+  fill: #ffd700;
+}
+
+
+/* E-mail */
+
+.Email{
+
+  border: 1px solid gainsboro;
+  background-color: #fff;
+  padding: 80px;
+  border-radius: 25px;
+}
+
+
+.EmailChildinp{
+  height: 80px;
+  border: 2px solid rgb(204, 37, 151);
+  border-radius: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+
+.EmailChildinp input{
+  border: none;
+  color: #1f1f1f;
+  padding-left:20px ;
+  font-size: 18px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.EmailSub{
+  display: block;
+  margin-top: 10px;
+  width: 180px;
+  height: 60px;
+  background: linear-gradient(to left, #7b3fe4, red);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  transform: scale(1,1);
+  transition: 0.5s all;
+
+}
+
+.EmailSub:hover{
+  
+  transform: scale(1.1,1.1);
+}
+.EmailSub:active{
+  
+  transform: scale(1,1);
+}
+
+/* Footer */
+
+.Allfoot{
+  background-color:  rgb(93, 0, 255);
+  margin-top: 50px;
+}
+.footer{
+  display: flex;
+  justify-content: space-around;
+  /* height: 40vh; */
+
+ 
+}
+
+.fooLeftSide{
+  /* display: flex;
+  justify-content: center; */
+  /* padding: 50px; */
+}
+.fooLeftSide a{
+  font-size: 40px;
+  font-weight:600;
+  text-decoration: none;
+  color: #fff;
+}
+
+.fooRightSide{
+  
+  /* margin-top: 50px; */
+
+}
+.Allfoot p{
+  font-size: 18px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fff;
+  margin: -5px auto;
+}
+
+
+
+/* ////////////////////////////////////////////////////////////// */
+
+
+.contact-illustration {
+  width: 220px;
+  margin: -550px 410px;
+
+}
+
+/* planet floating */
+.planet {
+  fill: #7b3fe4;
+  animation: secAnim 4s ease-in-out infinite;
+}
+
+/* message pulse */
+.msg {
+  fill: #6c63ff;
+  animation: pulse 2.5s infinite;
+}
+
+/* star blinking */
+.star {
+  fill: #ffd166;
+  animation: blink 1.5s infinite;
+}
+
+/* animations */
+@keyframes secAnim {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: .7; }
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.2; }
 }
