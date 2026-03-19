@@ -670,13 +670,13 @@ circle.progress{
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 5px;
+  /* padding: 0px 5px; */
 }
 
 .EmailChildinp input{
   border: none;
   color: #1f1f1f;
-  padding-left:20px ;
+  padding-left:5px ;
   font-size: 18px;
   border-radius: 20px;
   outline: none;
@@ -686,7 +686,7 @@ circle.progress{
   display: block;
   margin-top: 10px;
   /* width: 180px; */
-  height: 60px;
+  height: 55px;
   background: linear-gradient(to left, #7b3fe4, red);
   color: #fff;
   border: none;
