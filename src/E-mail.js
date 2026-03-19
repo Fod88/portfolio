@@ -2,17 +2,36 @@ import React from 'react'
 
 function Email() {
   return (
-    <div className='Email p-5 container m-auto row justify-content-between'>
-        <div className='EmailChildh2 col-lg-5 col-sm-12 mt-2'>
-            <h2 className=''>
-                See my Porjects At once & Leave
-                Here Your E-mail Adress
-            </h2>
+    <div className='Email container py-5'>
+      <div className='row align-items-center'>
+
+        {/* TEXT */}
+        <div className='col-lg-6 col-12 mb-3 mb-lg-0 text-center text-lg-start'>
+          <h2>
+            See my Projects At once & Leave
+            <br />
+            Here Your Email Address
+          </h2>
         </div>
-        <div className='EmailChildinp col-lg-5 col-sm-12 d-flex justify-content-between'>
-            <input type='text' placeholder='Email Adress' />
-            <button className='EmailSub w-25 w-sm-50'>Submit</button>
+
+        {/* INPUT + BUTTON */}
+        <div className='col-lg-6 col-12'>
+          <div className='d-flex flex-column flex-sm-row gap-2'>
+
+            <input
+              type='text'
+              placeholder='Email Address'
+              className='form-control'
+            />
+
+            <button className='btn EmailSub px-4'>
+              Submit
+            </button>
+
+          </div>
         </div>
+
+      </div>
     </div>
   )
 }
