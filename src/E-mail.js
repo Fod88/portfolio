@@ -2,7 +2,7 @@ import React from 'react'
 
 function Email() {
   return (
-    <div className='Email container m-auto row justify-content-between'>
+    <div className='Email p-5 container m-auto row justify-content-between'>
         <div className='EmailChildh2 col-lg-5 col-sm-12 mt-2'>
             <h2 className=''>
                 See my Porjects At once & Leave

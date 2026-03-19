@@ -658,7 +658,7 @@ circle.progress{
 
   border: 1px solid gainsboro;
   background-color: #fff;
-  padding: 80px;
+  /* padding: 80px; */
   border-radius: 25px;
 }
 
