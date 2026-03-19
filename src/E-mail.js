@@ -11,7 +11,7 @@ function Email() {
         </div>
         <div className='EmailChildinp col-lg-7 col-sm-12'>
             <input type='text' placeholder='Email Adress' />
-            <button className='EmailSub'>Submit</button>
+            <button className='EmailSub w-25 w-sm-50'>Submit</button>
         </div>
     </div>
   )

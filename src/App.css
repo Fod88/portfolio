@@ -373,10 +373,10 @@ body{
 .skillsSection{
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 130px;
   margin:  auto;
   overflow: hidden;
-  width: 51.5%;
+  width: 70%;
   background-color: rgb(251, 252, 253);
   position: relative;
 }
@@ -685,7 +685,7 @@ circle.progress{
 .EmailSub{
   display: block;
   margin-top: 10px;
-  width: 180px;
+  /* width: 180px; */
   height: 60px;
   background: linear-gradient(to left, #7b3fe4, red);
   color: #fff;

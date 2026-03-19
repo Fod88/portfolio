@@ -16,14 +16,14 @@ export default function Skills() {
   const [position, setPosition] = useState(0)
 
   const moveRight = () => {
-    if (position > -(skills.length - 3) * 240) {
-      setPosition(prev => prev - 240)
+    if (position > -(skills.length - 3) * 305) {
+      setPosition(prev => prev - 305)
     }
   }
 
   const moveLeft = () => {
-    if (position < 3 * 240) {
-      setPosition(prev => prev + 240)
+    if (position < 3 * 305) {
+      setPosition(prev => prev + 305)
     }
   }
 

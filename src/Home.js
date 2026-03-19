@@ -5,7 +5,7 @@ export default function Home() {
 const words = useMemo(() => [
   "React JS",
   "Web Developer",
-  "FrontEnd Developer"
+  "FrontEnd  Developer"
 ], [])
 
   const [indexWord,setIndexWord] = useState(0)
@@ -40,10 +40,11 @@ const words = useMemo(() => [
   return (
     <>
       <div className='row m-auto' id={'Home'}>
-        <div className='HomeLS col-lg-4 col-sm-12 mt-lg-5 mt-md-4 m-sm-auto' style={{height : '90vh'}} >
+        <div className='HomeLS col-lg-4 col-sm-12 mt-lg-5 mt-md-4 m-sm-auto' >
            <h2 className='h2 border p-2 text-center mt-3' style={{ color : '#fff', backgroundColor : 'rgb(93, 0, 255)'}}>Welcome All In My Portifoloi</h2>
-              <h1 className='mt-lg-5'style={{fontSize: '75px' , fontWeight:'bolder',color : 'rgb(38, 4, 97)'}} >
-                Hi! I'm <break/> Fady Atef Nady, 
+              <h1 className='mt-lg-5 m-sm-auto'style={{fontSize: '75px' , fontWeight:'bolder',color : 'rgb(38, 4, 97)'}} >
+                Hi! I'm <br/> Fady Atef Nady,
+                <br/>
                 {text}
                 <span className="cursor">|</span>
               </h1>
